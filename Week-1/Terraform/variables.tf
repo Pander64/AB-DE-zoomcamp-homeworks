@@ -3,7 +3,9 @@ locals {
 }
 
 variable "project" {
-  description = "Your GCP Project ID"
+  description = "Name"
+  default = "Name"
+  type = string
 }
 
 variable "region" {
