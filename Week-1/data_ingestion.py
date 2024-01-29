@@ -113,21 +113,3 @@ t_end = time()
 print("Finished ingesting data into the postgres database, it took %.3f seconds" % (t_end - t_start))
 
 
-##########################
-### SECTION 5: Cleanup ###
-##########################
-
-# Delete the parquet file
-"""
-os.remove("ny_taxi/yellow_tripdata_2023-01.parquet")
-
-
-with engine.connect() as conn:
-    # Delete the table
-    query = text("DROP TABLE de_zoom_camp.ny_yellow_taxi")
-    conn.execute(query)
-    conn.commit()
-    conn.close()
-    print("Deleted the table")
-
-"""
